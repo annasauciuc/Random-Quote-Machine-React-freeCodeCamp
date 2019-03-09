@@ -17,10 +17,32 @@ class Quote extends Component {
   quoteHandler() {
     const { quotes } = this.state;
 
+    const hue =
+      "rgb(" +
+      Math.floor(Math.random() * 256) +
+      ", " +
+      Math.floor(Math.random() * 256) +
+      ", " +
+      Math.floor(Math.random() * 256) +
+      ")";
+    console.log("hue :", hue);
     const index = Math.floor(Math.random() * 5) + 0;
-
+    // document.body.style.background = 'red';
     document.getElementById("text").innerText = quotes[index].text;
     document.getElementById("author").innerText = quotes[index].author;
+    document.querySelector(".wrapper").style.background = hue;
+    document.getElementById("text").style.color = hue;
+    document.getElementById("new-quote").style.background = hue;
+    document.getElementById("tumblr").style.background = hue;
+    document.getElementById("tweet-quote").style.background = hue;
+    document.getElementById("author").style.color = hue;
+    // document.getElementById("bodyId").style.backgroundColor = hue;
+
+    // document.getElementById("bodyId").setAttribute("style", "background-color: red!important;");
+    console.log(
+      'document.getElementById("bodyId") :',
+      document.getElementById("bodyId").style
+    );
   }
   render() {
     return (
@@ -41,18 +63,23 @@ class Quote extends Component {
               </footer>
             </div>
             <div className="d-flex">
-              <a id="tweet-quote" href="twitter.com/intent/tweet">
+              <a
+                id="tweet-quote"
+                className="mr-1  initialColor btn  text-white "
+                href="twitter.com/intent/tweet"
+              >
                 {" "}
-                <button className="btn mr-1 text-white bg-primary">
-                  <i className="devicon-twitter-plain" />
-                </button>
+                <i className="devicon-twitter-plain" />
               </a>
-              <button className="btn px-3  bg-primary  text-white">
+              <button
+                id="tumblr"
+                className="initialColor btn px-3    text-white"
+              >
                 <i className="fab fa-tumblr" />
               </button>
               <button
                 onClick={() => this.quoteHandler()}
-                className="ml-auto bg-primary btn text-white"
+                className="ml-auto initialColor btn text-white"
                 id="new-quote"
               >
                 New Quote

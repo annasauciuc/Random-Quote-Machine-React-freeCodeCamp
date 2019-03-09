@@ -4,6 +4,10 @@
     color: rgb(245, 156, 67);
 }
 
+.initialColor {
+    background-color: rgb(245, 156, 67);
+}
+
 * {
     margin: 0;
     padding: 0;
