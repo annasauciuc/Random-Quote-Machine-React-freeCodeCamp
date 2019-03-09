@@ -1,0 +1,30 @@
+.wrapper {
+    height: 100vh;
+    background-color: rgb(245, 156, 67);
+    color: rgb(245, 156, 67);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    transition-property: opacity, transform, -webkit-transform;
+    -webkit-transition-delay: .2s;
+    transition-delay: .2s;
+}
+
+body {
+    font-family: 'Alice', serif !important;
+    font-size: 1rem;
+    /* color: rgb(77, 77, 77) !important; */
+    overflow-y: auto;
+}
