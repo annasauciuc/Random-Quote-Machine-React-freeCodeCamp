@@ -7,7 +7,6 @@ class Quote extends Component {
     super(props);
     this.state = {
       quotes: [],
-      backgroundColor: ""
     };
   }
 
@@ -25,9 +24,8 @@ class Quote extends Component {
       ", " +
       Math.floor(Math.random() * 256) +
       ")";
-    console.log("hue :", hue);
     const index = Math.floor(Math.random() * 5) + 0;
-    // document.body.style.background = 'red';
+
     document.getElementById("text").innerText = quotes[index].text;
     document.getElementById("author").innerText = quotes[index].author;
     document.querySelector(".wrapper").style.background = hue;
@@ -36,13 +34,6 @@ class Quote extends Component {
     document.getElementById("tumblr").style.background = hue;
     document.getElementById("tweet-quote").style.background = hue;
     document.getElementById("author").style.color = hue;
-    // document.getElementById("bodyId").style.backgroundColor = hue;
-
-    // document.getElementById("bodyId").setAttribute("style", "background-color: red!important;");
-    console.log(
-      'document.getElementById("bodyId") :',
-      document.getElementById("bodyId").style
-    );
   }
   render() {
     return (
